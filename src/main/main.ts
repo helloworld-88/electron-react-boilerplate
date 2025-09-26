@@ -71,8 +71,12 @@ const createWindow = async () => {
 
   mainWindow = new BrowserWindow({
     show: false,
-    width: 1024,
-    height: 728,
+    width: 1200,
+    height: 800,
+    minWidth: 1000,
+    minHeight: 700,
+    frame: false, // 无边框窗口
+    titleBarStyle: 'hidden', // 隐藏标题栏
     icon: getAssetPath('icon.png'),
     webPreferences: {
       preload: app.isPackaged
@@ -98,8 +102,9 @@ const createWindow = async () => {
     mainWindow = null;
   });
 
-  const menuBuilder = new MenuBuilder(mainWindow);
-  menuBuilder.buildMenu();
+  // 去除菜单栏
+  // const menuBuilder = new MenuBuilder(mainWindow);
+  // menuBuilder.buildMenu();
 
   // Open urls in the user's browser
   mainWindow.webContents.setWindowOpenHandler((edata) => {

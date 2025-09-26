@@ -1,0 +1,321 @@
+/* Ant Design 登录页面样式 */
+.header {
+  display: flex;
+  -webkit-app-region: drag;
+  height: 30px;
+  background: #f9f9f9;
+}
+
+.header .left,.header .center,.header .right {
+  height: 30px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0
+}
+
+.header .left {
+  justify-content: flex-start
+}
+
+.header .center {
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  font-weight: 700;
+  justify-content: center
+}
+
+.header .right {
+  justify-content: flex-end;
+  gap: 1px
+}
+
+.header .right button {
+  -webkit-app-region: no-drag;
+  margin-left: 0;
+  height: 30px;
+  width: 35px;
+  border-radius: 0;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+  border: none;
+  outline: none;
+}
+
+/* 最小化按钮样式 */
+.header .right .header-button-minus:hover {
+  background-color: #e5e5e5 !important;
+}
+
+.header .right .header-button-minus:active {
+  background-color: #a3a3a3 !important;
+}
+
+/* 最大化按钮样式 */
+.header .right .header-button-border:hover {
+  background-color: #e5e5e5 !important;
+}
+
+.header .right .header-button-border:active {
+  background-color: #a3a3a3 !important;
+}
+
+/* 关闭按钮样式 */
+.header .right .header-button-close:hover {
+  background-color: #ff6b6b !important;
+  color: white !important;
+}
+
+.header .right .header-button-close:active {
+  background-color: #e53e3e !important;
+  color: white !important;
+}
+
+.login-container-antd {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* 自定义标题栏 */
+.title-bar-antd {
+  height: 32px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  -webkit-app-region: drag;
+  user-select: none;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.title-bar-content-antd {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-title-antd {
+  font-size: 14px;
+  color: #64748b;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.window-controls-antd {
+  -webkit-app-region: no-drag;
+}
+
+.control-btn-antd {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #64748b;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  backdrop-filter: blur(10px);
+}
+
+.control-btn-antd:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.control-btn-antd.close:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* 主要内容区域 */
+.login-content-antd {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+}
+
+/* 左侧面板 */
+.left-panel-antd {
+  flex: 1;
+  background-image: url('../../assets/image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* 右侧面板 */
+.right-panel-antd {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+}
+.right-panel-antd > * {
+  position: relative;
+  z-index: 2;
+}
+
+.login-form-antd {
+  width: 100%;
+  max-width: 350px;
+}
+
+.form-header-antd {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.theme-btn-antd {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #64748b;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.theme-btn-antd:hover {
+  background: #e2e8f0;
+}
+
+.form-content-antd {
+  text-align: center;
+}
+
+.welcome-title-antd {
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.welcome-subtitle-antd {
+  color: #64748b;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.login-btn-antd {
+  height: 42px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+}
+
+.login-btn-antd:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* 登录操作按钮样式 */
+.login-actions-antd {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.forgot-password-btn-antd,
+.register-btn-antd {
+  color: #64748b !important;
+  font-size: 14px;
+  padding: 0;
+  height: auto;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgot-password-btn-antd:hover,
+.register-btn-antd:hover {
+  color: #3b82f6 !important;
+  text-decoration: none;
+}
+
+.forgot-password-btn-antd:focus,
+.register-btn-antd:focus {
+  color: #3b82f6 !important;
+  text-decoration: none;
+}
+
+.copyright-antd {
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+}
+
+/* 表单样式覆盖 */
+.login-form-antd .ant-form-item-label > label {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* 复选框左对齐 */
+.login-form-antd .ant-checkbox-wrapper {
+  font-size: 14px;
+  color: #374151;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.login-form-antd .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+/* 响应式设计 */
+@media (max-width: 900px) {
+  .login-content-antd {
+    width: 95vw;
+    max-width: 700px;
+    height: 80vh;
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-content-antd {
+    width: 95vw;
+    height: 90vh;
+    flex-direction: column;
+  }
+
+  .left-panel-antd {
+    padding: 20px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .app-name-antd {
+    font-size: 20px;
+  }
+
+  .features-antd {
+    max-width: 100%;
+  }
+
+  .right-panel-antd {
+    padding: 20px;
+    border-radius: 0 0 16px 16px;
+  }
+}
